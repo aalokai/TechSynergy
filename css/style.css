@@ -204,6 +204,16 @@ a:focus {
   text-transform: uppercase;
 }
 
+.cnav{
+  background-color: #1cbbb4;
+  color: white;
+}
+
+
+
+
+
+
 /*end header section*/
 
 /* Fixed scrolling button */
