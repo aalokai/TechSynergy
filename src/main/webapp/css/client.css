@@ -1,0 +1,25 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 6, 2024, 1:08:11 AM
+    Author     : aalok
+*/
+
+
+.profile{
+    display:flex;
+    
+    
+}
+
+.profile-img{
+    width: 30%;
+    
+}
+
+.profile-text{
+    width: 70%;
+    
+}
