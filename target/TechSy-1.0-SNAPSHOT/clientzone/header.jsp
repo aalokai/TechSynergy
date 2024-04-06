@@ -23,9 +23,9 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ">
-                            <a class="nav-link text-light mx-2" href="#">Dashboard</a>
-                            <a class="nav-link text-light mx-2" href="#">My Projects</a>
-                            <a class="nav-link text-light mx-2" href="#">Inbox</a>
+                            <a class="nav-link text-light mx-2" href="clienthome.jsp">Dashboard</a>
+                            <a class="nav-link text-light mx-2" href="myprojects.jsp">My Projects</a>
+                            <a class="nav-link text-light mx-2" href="inbox.jsp">Inbox</a>
                             <a class="nav-link text-light mx-2 " href="logout.jsp">Logout</a>
                         </div>
                     </div>

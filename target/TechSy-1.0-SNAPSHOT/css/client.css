@@ -10,6 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 .profile{
     display:flex;
+    background-color: #f0fbff;
     
     
 }
@@ -21,5 +22,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 .profile-text{
     width: 70%;
+    
+    
+}
+
+.address{
+    background-color: #f0fbff;
+}
+
+.address-text{
     
 }

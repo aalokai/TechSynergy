@@ -20,13 +20,13 @@ if(request.getParameter("page").equals("register")){
     String address = request.getParameter("address");
     String country = request.getParameter("country");
     String languages = request.getParameter("languages");
-    String education = request.getParameter("education");
+    String bio = request.getParameter("bio");
     String portfolio = request.getParameter("portfolio");
 
     DbManager dm=new DbManager();
     // Constructing the query1 with proper column names and values
-    String query1 = "insert into user_registration (fullname, username, email, contact_number, password, skills, usertype, gender, address, country, languages, education, portfolio, registration_date) values ('" 
-                    + fullname + "','" + username + "','" + email + "','" + contact_number + "','" + password + "','" + skills + "','" + usertype + "','" + gender + "','" + address + "','" + country + "','" + languages + "','" + education + "','" + portfolio + "', CURDATE())";
+    String query1 = "insert into user_registration (fullname, username, email, contact_number, password, skills, usertype, gender, address, country, languages, bio, portfolio, registration_date) values ('" 
+                    + fullname + "','" + username + "','" + email + "','" + contact_number + "','" + password + "','" + skills + "','" + usertype + "','" + gender + "','" + address + "','" + country + "','" + languages + "','" + bio + "','" + portfolio + "', CURDATE())";
     String query2 = "insert into login_credentials (username, password, usertype, status) values ('" + username + "','" + password + "','" + usertype + "','false')";
     if(dm.insertUpdateDelete(query1)){
         if(dm.insertUpdateDelete(query2)){
