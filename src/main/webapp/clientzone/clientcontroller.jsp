@@ -22,7 +22,7 @@ if(request.getParameter("page").equals("post_project")){
     DbManager dm=new DbManager();
     // Constructing the query to insert project details
     String query = "INSERT INTO projects (username, projectTitle, projectCategory, projectDescription, skillsRequired, projectBudget, projectDeadline, postingDate) VALUES ('" 
-                    + username + "','" + projectTitle + "','" + projectCategory + "','" + projectDescription + "','" + skillsRequired + "','" + projectBudget + "','" + projectDeadline + "',curdate())";
+                    + username + "','" + projectTitle + "','" + projectCategory + "','" + projectDescription + "','" + skillsRequired + "','" + projectBudget + "','" + projectDeadline + "',NOW())";
 
     if(dm.insertUpdateDelete(query)){
         out.print("<script>alert('Project posted successfully!');window.location.href='clienthome.jsp';</script>");

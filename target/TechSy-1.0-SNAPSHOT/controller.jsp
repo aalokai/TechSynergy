@@ -26,7 +26,7 @@ if(request.getParameter("page").equals("register")){
     DbManager dm=new DbManager();
     // Constructing the query1 with proper column names and values
     String query1 = "insert into user_registration (fullname, username, email, contact_number, password, skills, usertype, gender, address, country, languages, bio, portfolio, registration_date) values ('" 
-                    + fullname + "','" + username + "','" + email + "','" + contact_number + "','" + password + "','" + skills + "','" + usertype + "','" + gender + "','" + address + "','" + country + "','" + languages + "','" + bio + "','" + portfolio + "', CURDATE())";
+                    + fullname + "','" + username + "','" + email + "','" + contact_number + "','" + password + "','" + skills + "','" + usertype + "','" + gender + "','" + address + "','" + country + "','" + languages + "','" + bio + "','" + portfolio + "', NOW())";
     String query2 = "insert into login_credentials (username, password, usertype, status) values ('" + username + "','" + password + "','" + usertype + "','false')";
     if(dm.insertUpdateDelete(query1)){
         if(dm.insertUpdateDelete(query2)){

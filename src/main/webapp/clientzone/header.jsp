@@ -18,13 +18,15 @@
                             TechSynergy
                         </span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" style=" background-color: #fff; /* Set the background color to white */
+                      border-color: #fff; /* Set the border color to white */">></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ">
                             <a class="nav-link text-light mx-2" href="clienthome.jsp">Dashboard</a>
                             <a class="nav-link text-light mx-2" href="myprojects.jsp">My Projects</a>
+                            <a class="nav-link text-light mx-2" href="myprojects.jsp">Project Bids</a>
                             <a class="nav-link text-light mx-2" href="inbox.jsp">Inbox</a>
                             <a class="nav-link text-light mx-2 " href="logout.jsp">Logout</a>
                         </div>

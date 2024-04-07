@@ -207,8 +207,8 @@
                             <label for="usertype" class="form-label">User Type</label>
                             <select name="usertype" id="usertype" class="form-control" required>
                                 <option value="">Select User Type</option>
-                                <option value="client">Client</option>
-                                <option value="freelancer">Freelancer</option>
+                                <option value="Client">Client</option>
+                                <option value="Freelancer">Freelancer</option>
                             </select>
                         </div>
 

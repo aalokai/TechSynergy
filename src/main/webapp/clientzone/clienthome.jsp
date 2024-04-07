@@ -97,7 +97,8 @@ else{
                             <h4>Personal Details &darr;</h4>
 
                             <p>
-
+                                Usertype: <%=rs.getString("usertype")%>
+                                <br/>
                                 Languages: <%=rs.getString("languages")%>
 
                                 <br/>
@@ -131,6 +132,7 @@ else{
         
         <div class="my-3 text-center">
             <a class="btn btn-danger" href="projectform.jsp" role="button">Post a Project</a>
+            
             
         </div>
 
