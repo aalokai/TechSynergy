@@ -26,8 +26,8 @@
                         <div class="navbar-nav ">
                             <a class="nav-link text-light mx-2" href="clienthome.jsp">Dashboard</a>
                             <a class="nav-link text-light mx-2" href="myprojects.jsp">My Projects</a>
-                            <a class="nav-link text-light mx-2" href="myprojects.jsp">Project Bids</a>
-                            <a class="nav-link text-light mx-2" href="inbox.jsp">Inbox</a>
+                            <a class="nav-link text-light mx-2" href="projectbids.jsp">Project Bids</a>
+                            <a class="nav-link text-light mx-2" href="messages.jsp">Messages</a>
                             <a class="nav-link text-light mx-2 " href="logout.jsp">Logout</a>
                         </div>
                     </div>

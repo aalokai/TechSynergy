@@ -58,7 +58,8 @@ else{
                         <tr class="text-center table-dark">
                             <th>Id.No</th>
                             <th>Project Title</th>
-                            <th>Project Client</th>
+                            <th>Client Name</th>
+                            <th>Client Username</th>
                             <th>Project Category</th>
                             <th>Project Description</th>
                             <th>Skills Required</th>
@@ -78,6 +79,7 @@ else{
                         <tr>
                             <td><%=rs.getString("id")%></td>
                             <td><%=rs.getString("projectTitle")%></td>
+                            <td><%=rs.getString("fullname")%></td>
                             <td><%=rs.getString("username")%></td>
                             <td><%=rs.getString("projectCategory")%></td>
                             <td><%=rs.getString("projectDescription")%></td>

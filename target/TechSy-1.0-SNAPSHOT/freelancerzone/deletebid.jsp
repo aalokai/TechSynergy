@@ -10,7 +10,7 @@
 <%
 String id=request.getParameter("id");
 DbManager dm=new DbManager();
-String query="delete from bids where id='"+id+"'";
+String query="delete from bids where projectId='"+id+"'";
 if(dm.insertUpdateDelete(query)==true){
     out.print("<script>alert('Bid is deleted');window.location.href='mybids.jsp';</script>");
 

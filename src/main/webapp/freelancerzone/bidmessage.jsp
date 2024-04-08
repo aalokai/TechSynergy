@@ -110,10 +110,15 @@ else{
                             <table class="table table-striped">
                                 <tbody>
                                     <tr>
-                                        <td>Project Client:</td>
+                                        <td>Client Name:</td>
+                                        <td><%= rs.getString("fullname") %></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Project Category:</td>
                                         <td><%= rs.getString("username") %></td>
                                     </tr>
-
+                                    
                                     <tr>
                                         <td>Project Category:</td>
                                         <td><%= rs.getString("projectCategory") %></td>

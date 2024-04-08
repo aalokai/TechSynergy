@@ -132,8 +132,8 @@ else{
         
         <!--Post a project button-->
 <div class="my-3 text-center">
-    <a class="btn btn-primary custom-btn mx-2" href="projectform.jsp" style="width: 120px;" role="button">Bid</a>
-  <a class="btn btn-info custom-btn mx-2" href="projectform.jsp" style="width: 120px;" role="button">TeamUp</a>
+    <a class="btn btn-primary custom-btn mx-2" href="bidprojects.jsp" style="width: 120px;" role="button">Bid</a>
+  <a class="btn btn-info custom-btn mx-2" href="teamup.jsp" style="width: 120px;" role="button">TeamUp</a>
 </div>
 
 

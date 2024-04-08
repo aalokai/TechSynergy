@@ -146,7 +146,9 @@ else{
                             <button type="submit" class="btn btn-success">Submit Project</button>
                         </div>
                     </form>
-
+                    <div class="mb-4">
+                                <a href="clienthome.jsp" class="btn btn-link">Back</a>
+                            </div>
 
 
 

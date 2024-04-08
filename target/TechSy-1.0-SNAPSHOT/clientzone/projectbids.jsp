@@ -49,66 +49,78 @@ else{
 
 
         <!--My Projects Table Section start-->
-        
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 my-5" style="min-height: 500px;">
-                    <h2 class="mb-4" style="text-align: center;">My Projects</h2>
-                    <table class="table table-bordered table-striped " style="margin: auto;width: 90%">
-                        <tr class="text-center table-dark">
-                            <th>Id.No</th>
-                            <th>Project Title</th>
-                            <th>Project Category</th>
-                            <th>Project Description</th>
-                            <th>Skills Required</th>
-                            <th>Project Budget</th>
-                            <th>Project Deadline</th>
-                            <th>Posting Date</th>
-                            <th>Delete</th>
-                        </tr>
-                        <%
-                        String username=session.getAttribute("cusername").toString();
-                            String query="select * from projects where username='"+username+"'";
-                            DbManager dm=new DbManager();
-                            ResultSet rs=dm.select(query);
-                        while(rs.next()){
-                        
-                        %>
-                        <tr>
-                            <td><%=rs.getString("id")%></td>
-                            <td><%=rs.getString("projectTitle")%></td>
-                            <td><%=rs.getString("projectCategory")%></td>
-                            <td><%=rs.getString("projectDescription")%></td>
-                            <td><%=rs.getString("skillsRequired")%></td>
-                            <td><%=rs.getString("projectBudget")%></td>
-                            <td><%=rs.getString("projectDeadline")%></td>
-                            <td><%=rs.getString("postingDate")%></td>
-                            <td>
-                                <a href="deleteproject.jsp?id=<%=rs.getString("id")%>">
-                                    <button class="btn btn-danger">
-                                        Delete
-                                    </button>
+
+        <div class="container-fluid " style="background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);" >
+            <div class="row p-5">
+                <h2 class="mb-4" style="text-align: center;">Project Details</h2>
+
+                <% 
+                String username=session.getAttribute("cusername").toString();
+                String query="select * from bids where clientUsername='"+username+"' ORDER BY bidDate DESC;";
+                DbManager dm=new DbManager();
+                ResultSet rs=dm.select(query);
+                while(rs.next()) {
+                %>
+                <div >
+                    <div class="bid-item mb-4 bg-light rounded shadow ">
+                        <div class=" row  p-4 bid-item-details ">
+                            <h4><strong>Project Id:</strong> <%= rs.getString("projectId") %><br></h4>
+                            <hr >
+
+                            <div class="div-text col-sm-12 col-md-4 col-lg-4">
+                                <p>
+                                    <strong>Project Title:</strong> <%= rs.getString("projectTitle") %><br>
+                                    <strong>Project Category:</strong> <%= rs.getString("projectCategory") %><br>
+                                    <strong>Project Description:</strong> <%= rs.getString("projectDescription") %><br>
+                                    <strong>Skills Required:</strong> <%= rs.getString("skillsRequired") %><br>
+                                    <strong>Project Budget:</strong> <%= rs.getString("projectBudget") %><br>
+                                    <strong>Project Deadline:</strong> <%= rs.getString("projectDeadline") %><br>
+                                    <strong>Project Posting Date:</strong> <%= rs.getString("projectPostingDate") %>
+                                </p>
+                            </div>
+                            <div class="div-text col-sm-12 col-md-4 col-lg-4">
+                                <p>
+                                    <strong>Freelancer Name:</strong> <%= rs.getString("freelancerFullName") %><br>
+                                    <strong>Freelancer Username:</strong> <%= rs.getString("freelancerUsername") %><br>
+                                    <strong>Freelancer Email:</strong> <%= rs.getString("freelancerEmail") %><br>
+                                    <strong>Freelancer Contact No.:</strong> <%= rs.getString("freelancerContactNumber") %><br>
+                                    <strong>Freelancer Skills:</strong> <%= rs.getString("freelancerSkills") %><br>
+                                    <strong>Freelancer Language:</strong> <%= rs.getString("freelancerLanguage") %><br>
+                                    <strong>Freelancer Bio:</strong> <%= rs.getString("freelancerBio") %><br>
+                                    <strong>Freelancer Portfolio:</strong> <%= rs.getString("freelancerPortfolio") %>
+
+                                </p>
+
+                            </div>
+                            <div class="div-text col-sm-12 col-md-4 col-lg-4">
+                                <p>
+                                    <strong>Bid Amount:</strong> <%= rs.getString("bidAmount") %><br>
+                                    <strong>Bid Duration:</strong> <%= rs.getString("bidDuration") %><br>
+                                    <strong>Bid Message:</strong> <%= rs.getString("bidMessage") %><br>
+                                    <strong>Bid Date:</strong> <%= rs.getString("bidDate") %>
+                                </p>
+                                <div>
+                                <a href="messages.jsp?id=<%= rs.getString("freelancerUsername") %>" class="me-1">
+                                    <button class="btn btn-success">Reward Project</button>
                                 </a>
-                            </td>
-                            
-                        </tr>
-                        
-                        
-                        
-                        
-                        <% } %>
-                    </table>
-                    
-                    
-                    
-                    
+                                    
+                                <!-- Delete Bid Button -->
+                                <a href="deletebid.jsp?id=<%= rs.getString("projectId") %>" class="ms-1">
+                                    <button class="btn btn-danger  ">Delete Bid</button>
+                                </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+                <%}%>
             </div>
-            
         </div>
-        
-        
-        
+
+
+
+
         <!--My Projects Table Section start-->
 
 

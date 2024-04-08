@@ -50,93 +50,98 @@ else{
 
         <!--My Bids  Section start-->
         
-        <div class="container-fluid">
+        <div class="container-fluid" style="background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);">
             <div class="row">
                 <div class="col-sm-12 my-5" style="min-height: 500px;">
                     <h2 class="mb-4" style="text-align: center;">My Bids</h2>
                     <table class="table table-bordered table-striped " style="margin: auto;width: 90%">
                         <tr class="text-center table-dark">
                             <th>Id.No</th>
+                            <th>Client Name</th>
+                            <th>Client Username</th>
                             <th>Project Title</th>
-                            <th>Project Client</th>
                             <th>Project Category</th>
                             <th>Project Description</th>
                             <th>Skills Required</th>
                             <th>Project Budget</th>
                             <th>Project Deadline</th>
-                            <th>Posting Date</th>
+                            <th>Project Posting Date</th>
                             <th>Bid Amount</th>
                             <th>Bid Duration</th>
                             <th>Bid Message</th>
                             <th>Bid Date</th>
                             <th>Delete</th>
                         </tr>
-                        <%
-                        DbManager dm=new DbManager();    
-                        String username=session.getAttribute("fusername").toString();
-                        // Execute the SQL query to retrieve the id
-                        String query = "SELECT id FROM bids WHERE freelancerUsername='" + username + "'";
-                        ResultSet rs = dm.select(query);
+                
+                <%
+                    String username=session.getAttribute("fusername").toString();
+                    String query="select * from bids where freelancerUsername='"+username+"'";
+                    DbManager dm=new DbManager();
+                    ResultSet rs=dm.select(query);
+                    while(rs.next())
+                    {
+                
+                    
+                %>
+                
+                
+                <tr>
+                
+                <td><%= rs.getString("projectId") %></td>
+            
+                <td><%= rs.getString("clientFullName") %></td>
+            
+                <td><%= rs.getString("clientUsername") %></td>
+            
+                <td><%= rs.getString("projectTitle") %></td>
+            
+                <td><%= rs.getString("projectCategory") %></td>
+            
+                <td><%= rs.getString("projectDescription") %></td>
+            
+                <td><%= rs.getString("skillsRequired") %></td>
+            
+                <td><%= rs.getString("projectBudget") %></td>
+            
+                <td><%= rs.getString("projectDeadline") %></td>
+            
+                <td><%= rs.getString("projectPostingDate") %></td>
+            
+                <td><%= rs.getString("bidAmount") %></td>
+            
+                <td><%= rs.getString("bidDuration") %></td>
+            
+                <td><%= rs.getString("bidMessage") %></td>
+            
+                <td><%= rs.getString("bidDate") %></td>
+                
+                <td>
+                    <a href="deletebid.jsp?id=<%=rs.getString("projectId")%>">
+                        <button class="btn btn-danger">
+                            Delete
+                        </button>
+                    </a>
+                </td>
+                
+            </tr>
 
-                        int id = 0; // Default value in case the query does not return any results
-                        if (rs.next()) {
-                        // Retrieve the id from the ResultSet
-                        id = rs.getInt("id");
-                        }
-
-                        String query1="select * from projects where id='"+id+"';";
-                        String query2="select * from bids where freelancerUsername = '"+username+"'" ;
-                            
-                            
-                            ResultSet rs1=dm.select(query1);
-                            ResultSet rs2=dm.select(query2);
-                        while(rs1.next()){
                         
-                        %>
-                        <tr>
-                            <td><%= rs1.getString("id") %></td>
-                            <td><%= rs1.getString("projectTitle") %></td>
-                            <td><%= rs1.getString("username") %></td>
-                            <td><%= rs1.getString("projectCategory") %></td>
-                            <td><%= rs1.getString("projectDescription") %></td>
-                            <td><%= rs1.getString("skillsRequired") %></td>
-                            <td><%= rs1.getString("projectBudget") %></td>
-                            <td><%= rs1.getString("projectDeadline") %></td>
-                            <td><%= rs1.getString("postingDate") %></td>\
-                            
-                            <%}%>
-                            
-                            <% while(rs2.next()){
-                            
-                                %>
-                            <td><%= rs2.getString("bidAmount") %></td>
-                            <td><%= rs2.getString("bidDuration") %></td>
-                            <td><%= rs2.getString("bidMessage") %></td>
-                            <td><%= rs2.getString("bidDate") %></td>
-                            
-                            <td>
-                                <a href="deletebid.jsp?id=<%=id%>">
-                                    <button class="btn btn-danger">
-                                        Delete
-                                    </button>
-                                </a>
-                            </td>
-                            
-                        </tr>
-                        
-                        <%}%>
-                        
-                        
-                        
+                    
+                    <%}%>
+                    
                     </table>
-                    
-                    
-                    
+                        
+             
+                        
+                    </div>
                     
                 </div>
+                
+                
             </div>
-            
         </div>
+
+        <!--bid section ends-->
 
 
         <jsp:include page="footer.jsp"/>

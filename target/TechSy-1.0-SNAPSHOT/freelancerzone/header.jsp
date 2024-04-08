@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <header>
 
-    <nav class="navbar navbar-expand-lg " style="background-color: #1a2e35; ">
+    <nav class=" navbar navbar-expand-lg " style="background-color: #1a2e35; ">
         <div class="container-fluid">
             <a class="navbar-brand" style="color: white;" href="../index.jsp">
                 <img src="../images/logo.png" style="min-width: 35px;
@@ -28,7 +28,7 @@
                     <a class="nav-link text-light mx-2" href="bidprojects.jsp">Bid Projects</a>
                     <a class="nav-link text-light mx-2" href="mybids.jsp">My Bids</a>
                     <a class="nav-link text-light mx-2" href="teamup.jsp">TeamUp</a>
-                    <a class="nav-link text-light mx-2" href="inbox.jsp">Inbox</a>
+                    <a class="nav-link text-light mx-2" href="messages.jsp">Messages</a>
                     <a class="nav-link text-light mx-2 " href="logout.jsp">Logout</a>
                 </div>
             </div>
