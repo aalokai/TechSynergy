@@ -70,9 +70,31 @@
         </header>
 
         <!-- Login Section -->
+        <div class="container-fluid">
+            <div class="row">
+                
+              <div></div>
+                
+                
+                
+                
+            </div>
+            
+            
+        </div>
 
-admin
 
+
+
+
+
+
+
+
+
+
+
+        <!--Login Section End-->
         <!-- info section -->
 
         <section class="info_section ">

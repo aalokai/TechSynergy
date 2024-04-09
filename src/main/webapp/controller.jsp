@@ -57,11 +57,11 @@ else if(request.getParameter("page").equals("login")){
             session.setAttribute("ausername",username);
             response.sendRedirect("adminzone/adminhome.jsp");
         }
-        else if(usertype.equals("freelancer")){
+        else if(usertype.equals("freelancer")||usertype.equals("Freelancer")){
             session.setAttribute("fusername",username);
             response.sendRedirect("freelancerzone/freelancerhome.jsp");
         }
-        else if(usertype.equals("client")){
+        else if(usertype.equals("client")||usertype.equals("Client")){
             session.setAttribute("cusername",username);
             response.sendRedirect("clientzone/clienthome.jsp");
         }

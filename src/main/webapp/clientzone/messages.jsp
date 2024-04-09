@@ -85,7 +85,7 @@ else{
                             
                             <br/>
                             <h5 class="mt-4 mb-3 text-center">Send Message</h5>
-                            <form id="sendMessageForm" class="form-group" method="post" action="freelancercontroller.jsp">
+                            <form id="sendMessageForm" class="form-group" method="post" action="clientcontroller.jsp">
                                 <input type="hidden" name="page" value="send_message" />
                                 <div class="mb-3">
                                     <label for="recipientUsername" class="form-label">Send To</label>
