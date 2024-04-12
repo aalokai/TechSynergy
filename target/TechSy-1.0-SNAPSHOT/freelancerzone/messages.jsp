@@ -63,8 +63,11 @@ else{
                             <div id="chatHistoryContainer" class="p-2 chathistory border border-body-tertiary rounded " style="height: 300px; overflow-y: scroll; background-color: white;">
                                 <% 
                                     DbManager dm=new DbManager();
-                                    String query = "SELECT * FROM messages";
-                                    String username=request.getParameter("username");
+                                    
+                                    String username=session.getAttribute("fusername").toString();
+                                    
+                                    
+                                    String query = "SELECT * FROM messages where senderUsername='"+username+"' or recipientUsername='"+username+"'  ";
                                     ResultSet rs = dm.select(query);
 
                                     while(rs.next()) {
